@@ -1,0 +1,23 @@
+[user]
+    email = memclutter@gmail.com
+    name = Memory Clutter
+[push]
+    default = simple
+[alias]
+    a  = add
+    aa = add .
+    b  = branch
+    bd = branch -D
+    bm = branch -M
+    co = checkout
+    cb = checkout -b
+    cl = clean -fd
+    ci = commit
+    cm = commit -m
+    df = diff --color=auto
+    ph = push
+    pl = pull
+    pr = pull --rebase
+    st = status
+[core]
+    autocrlf = input

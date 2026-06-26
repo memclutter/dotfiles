@@ -1,7 +1,7 @@
 # Dotfiles
 
 [![Latest release](https://img.shields.io/github/v/release/memclutter/dotfiles?sort=semver)](https://github.com/memclutter/dotfiles/releases/latest)
-[![License](https://img.shields.io/github/license/memclutter/dotfiles)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Managed with chezmoi](https://img.shields.io/badge/managed%20with-chezmoi-blue)](https://chezmoi.io)
 
 My personal dotfiles, managed with [chezmoi](https://chezmoi.io) so a single

@@ -1,6 +1,9 @@
 [user]
     email = memclutter@gmail.com
     name = Memory Clutter
+    signingkey = 380055E37E57E162E1525711CDC0038AFF10063C
+[init]
+    defaultBranch = main
 [push]
     default = simple
 [alias]

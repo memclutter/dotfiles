@@ -47,4 +47,4 @@ Feel free to fork and adapt these to your own preferences. Happy coding!
 
 ## License
 
-[GPL-3.0](LICENSE)
+[MIT](LICENSE)

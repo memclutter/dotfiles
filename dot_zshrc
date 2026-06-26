@@ -1,0 +1,56 @@
+# Base PATH.
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+
+# Oh My Zsh (cloned by chezmoi, see .chezmoiexternal.toml). Auto-update is left
+# enabled so the framework keeps itself current.
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source "$ZSH/oh-my-zsh.sh"
+
+# Docker Compose aliases.
+alias dc="docker compose"
+alias dcps="docker compose ps"
+alias dcl="docker compose logs"
+alias dclf="docker compose logs -f"
+alias dce="docker compose exec"
+alias dcd="docker compose down"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcdvro="docker compose down --remove-orphans --volumes"
+alias dcrun="docker compose run"
+
+# Go. Paths kept as actually installed; guarded so a machine without them is fine.
+export GOPATH="$HOME/go1.24"
+if [ -d "$HOME/Projects/vendors/golang/go1.24/bin" ]; then
+  export PATH="$GOPATH/bin:$HOME/Projects/vendors/golang/go1.24/bin:$PATH"
+fi
+
+# Node Version Manager.
+export NVM_DIR="$HOME/Projects/vendors/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# PostgreSQL.
+if [ -d "/usr/local/pgsql/bin" ]; then
+  export PATH="/usr/local/pgsql/bin:$PATH"
+fi
+
+# Android SDK.
+if [ -d "$HOME/Android/Sdk/platform-tools" ]; then
+  export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
+fi
+
+# Yandex Cloud CLI.
+[ -f "$HOME/yandex-cloud/path.bash.inc" ] && source "$HOME/yandex-cloud/path.bash.inc"
+[ -f "$HOME/yandex-cloud/completion.zsh.inc" ] && source "$HOME/yandex-cloud/completion.zsh.inc"
+
+# opencode.
+if [ -d "$HOME/.opencode/bin" ]; then
+  export PATH="$HOME/.opencode/bin:$PATH"
+fi
+
+# LM Studio CLI (lms).
+if [ -d "$HOME/.lmstudio/bin" ]; then
+  export PATH="$PATH:$HOME/.lmstudio/bin"
+fi

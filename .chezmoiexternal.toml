@@ -1,0 +1,6 @@
+# Oh My Zsh framework, cloned by chezmoi on first apply.
+# No refreshPeriod: chezmoi only performs the initial clone; Oh My Zsh keeps
+# itself current via its own built-in auto-update.
+[".oh-my-zsh"]
+    type = "git-repo"
+    url = "https://github.com/ohmyzsh/ohmyzsh.git"

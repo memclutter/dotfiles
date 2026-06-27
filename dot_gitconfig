@@ -1,7 +1,6 @@
 [user]
     email = memclutter@gmail.com
     name = Memory Clutter
-    signingkey = 380055E37E57E162E1525711CDC0038AFF10063C
 [init]
     defaultBranch = main
 [push]
@@ -24,3 +23,12 @@
     st = status
 [core]
     autocrlf = input
+# Sign commits and tags only in repositories hosted on github.com (matched by
+# remote URL). Other repos sign nothing unless they opt in locally, and may use
+# a different signing key. See ~/.gitconfig-github.
+[includeIf "hasconfig:remote.*.url:git@github.com:**"]
+    path = ~/.gitconfig-github
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+    path = ~/.gitconfig-github
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/**"]
+    path = ~/.gitconfig-github

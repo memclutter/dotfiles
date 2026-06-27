@@ -1,0 +1,10 @@
+# Included from ~/.gitconfig (as ~/.gitconfig_github) only for repositories
+# whose remote is on github.com — see the includeIf blocks in ~/.gitconfig.
+# Keeps commit signing scoped to GitHub so non-GitHub repos can stay unsigned
+# or use another key.
+[user]
+    signingkey = 380055E37E57E162E1525711CDC0038AFF10063C
+[commit]
+    gpgsign = true
+[tag]
+    gpgSign = true

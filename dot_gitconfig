@@ -25,10 +25,12 @@
     autocrlf = input
 # Sign commits and tags only in repositories hosted on github.com (matched by
 # remote URL). Other repos sign nothing unless they opt in locally, and may use
-# a different signing key. See ~/.gitconfig-github.
-[includeIf "hasconfig:remote.*.url:git@github.com:**"]
-    path = ~/.gitconfig-github
+# a different signing key. See ~/.gitconfig_github.
+# Note the SSH pattern is `:*/**` not `:**` — in git's wildmatch, `**` only
+# spans `/` when it directly follows a slash, so it must come after `owner/`.
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+    path = ~/.gitconfig_github
 [includeIf "hasconfig:remote.*.url:https://github.com/**"]
-    path = ~/.gitconfig-github
+    path = ~/.gitconfig_github
 [includeIf "hasconfig:remote.*.url:ssh://git@github.com/**"]
-    path = ~/.gitconfig-github
+    path = ~/.gitconfig_github
